@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+<?import org.controlsfx.control.tableview2.FilteredTableView?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets left="5.0" right="5.0" />
+   </padding>
+   <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+      <padding>
+         <Insets right="10.0" />
+      </padding>
+      <Separator opacity="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+      <Label text="Job No:" textFill="#976868" HBox.hgrow="ALWAYS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin>
+      </Label>
+      <Label fx:id="jobNoLabel" textFill="#7b838d" HBox.hgrow="ALWAYS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </HBox>
+   <TitledPane style="-fx-border-color: #04413B; -fx-border-width: 2;" text="Main Details" textFill="#0e7ad3" VBox.vgrow="ALWAYS">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </VBox.margin>
+      <GridPane fx:id="jcGridPane">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="128.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="398.0" minWidth="10.0" prefWidth="398.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="25.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="60.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="60.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Label text="Entry No:">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Leg No:" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Qty:" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Code:" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Description:" GridPane.rowIndex="7">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <TextArea fx:id="description" prefHeight="60.0" prefWidth="328.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+         </TextArea>
+         <CustomTextField fx:id="entryNo" minHeight="25.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+            <padding>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </padding>
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+         </CustomTextField>
+         <CustomTextField fx:id="legIdx" minHeight="25.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+            <padding>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </padding>
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+         </CustomTextField>
+         <CustomTextField fx:id="qty" minHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+            <padding>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </padding>
+         </CustomTextField>
+         <CustomTextField fx:id="code" minHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+            <padding>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </padding>
+         </CustomTextField>
+         <Label layoutX="20.0" layoutY="219.0" text="Memo:" GridPane.rowIndex="8">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <TextArea fx:id="memo" layoutX="199.0" layoutY="192.0" prefHeight="60.0" prefWidth="328.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+         </TextArea>
+         <Label text="Quick Books Code:" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <CustomTextField fx:id="qBCode" minHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+            <padding>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </padding>
+         </CustomTextField>
+         <Label text="Unit of Measurement:" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <CustomTextField fx:id="uom" minHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets bottom="2.0" top="2.0" />
+            </GridPane.margin>
+            <padding>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </padding>
+         </CustomTextField>
+         <Label text="Allocate Drivers:" GridPane.rowIndex="6">
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </Label>
+         <CheckComboBox fx:id="driverListCombo" prefHeight="25.0" prefWidth="399.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" />
+      </GridPane>
+   </TitledPane>
+   <TitledPane style="-fx-border-color: #f86836; -fx-border-width: 2;" text="Loading Details" VBox.vgrow="ALWAYS">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <VBox.margin>
+         <Insets top="2.0" />
+      </VBox.margin>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="260.0" minWidth="10.0" prefWidth="130.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="400.0" minWidth="10.0" prefWidth="400.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Label text="Pick Up On:">
+            <GridPane.margin>
+               <Insets left="10.0" right="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Due On:" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets left="10.0" right="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Pick Up From:" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets left="10.0" right="10.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Drop Off At:" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets left="10.0" right="10.0" />
+            </GridPane.margin>
+         </Label>
+         <CustomTextField fx:id="pickUpLocation" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets right="5.0" />
+            </GridPane.margin>
+         </CustomTextField>
+         <CustomTextField fx:id="deliveryLocation" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets right="5.0" />
+            </GridPane.margin>
+         </CustomTextField>
+         <HBox fx:id="dtmStartHBox" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+         <HBox fx:id="dtmDueHBox" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      </GridPane>
+   </TitledPane>
+   <TitledPane style="-fx-border-color: #486f3a; -fx-border-width: 2;" text="Containers" VBox.vgrow="ALWAYS">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+      <VBox.margin>
+         <Insets bottom="5.0" top="5.0" />
+      </VBox.margin>
+      <VBox prefHeight="200.0" prefWidth="531.0">
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+         <children>
+            <FilteredTableView fx:id="containerTable" VBox.vgrow="ALWAYS" />
+            <TitledPane text="Add/ Edit Container" textFill="#0d615e" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="100.0" prefWidth="26.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="300.0" prefWidth="238.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="402.0" minWidth="10.0" prefWidth="402.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Container No:" />
+                        <CustomTextField fx:id="containerNo" prefHeight="25.0" prefWidth="332.0" GridPane.columnIndex="1" />
+                        <JFXButton fx:id="addContainerBtn" buttonType="RAISED" style="-fx-border-color: #486f3a; -fx-border-radius: 5; -fx-border-width: 2;" text="Add" textFill="#486f3a" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TitledPane>
+         </children>
+      </VBox>
+   </TitledPane>
+   <HBox alignment="CENTER_LEFT" prefWidth="200.0" VBox.vgrow="NEVER">
+      <VBox.margin>
+         <Insets bottom="5.0" top="5.0" />
+      </VBox.margin>
+      <Label text="Unit Price (Ex. Tax):" />
+      <CustomTextField fx:id="priceLessTax" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+      </CustomTextField>
+   </HBox>
+   <HBox alignment="CENTER" prefWidth="200.0">
+      <VBox.margin>
+         <Insets bottom="10.0" top="10.0" />
+      </VBox.margin>
+      <CheckBox fx:id="isJobDraft" mnemonicParsing="false" text="Is draft?" textFill="#eb0d0d">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+      </CheckBox>
+      <Separator opacity="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+      <JFXButton fx:id="saveBtn" buttonType="RAISED" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #096b0e;" text="Save Job" textFill="#096b0e" HBox.hgrow="ALWAYS">
+         <padding>
+            <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="clearBtn" buttonType="RAISED" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #e40b0b;" text="Clear" textFill="#e40b0b" HBox.hgrow="ALWAYS">
+         <HBox.margin>
+            <Insets left="10.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </HBox>
+</VBox>

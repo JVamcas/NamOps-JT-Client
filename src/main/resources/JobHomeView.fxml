@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.SearchableComboBox?>
+<?import org.controlsfx.control.WorldMapView?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
+<?import org.controlsfx.glyphfont.Glyph?>
+
+<BorderPane prefHeight="903.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <left>
+        <VBox maxWidth="-Infinity" prefHeight="903.0" prefWidth="526.0" style="-fx-border-width: 2; -fx-border-color: #094F99;" BorderPane.alignment="CENTER_LEFT">
+            <TitledPane fx:id="jobCardLayout" alignment="CENTER" contentDisplay="TOP" prefHeight="411.0" prefWidth="523.0" text="Data processing" textFill="#0861b5">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="10.0" right="10.0" top="5.0" />
+                </VBox.margin>
+                <content>
+                    <TitledPane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="438.0" text="Job Query" textFill="#636808">
+                        <content>
+                            <GridPane maxHeight="-Infinity" prefHeight="229.0" prefWidth="559.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="120.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="180.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="60.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="10.0" prefWidth="180.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="-Infinity" minHeight="35.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="35.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="35.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="-Infinity" minHeight="35.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="35.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="35.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="30.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <Label text="QB Number:" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label text="Allocated Driver:" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label layoutX="31.0" layoutY="50.0" text="Job No:">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label layoutX="31.0" layoutY="24.0" text="From:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label layoutX="21.0" layoutY="120.0" text="To:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <SearchableComboBox fx:id="allocatedDriverCombo" prefHeight="21.0" prefWidth="346.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets bottom="5.0" top="5.0" />
+                                    </GridPane.margin>
+                                </SearchableComboBox>
+                                <CustomTextField fx:id="jobNo" prefHeight="25.0" prefWidth="196.0" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+                                <CustomTextField fx:id="qbNo" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="6">
+                                    <children>
+                                        <Separator opacity="0.0" prefHeight="3.0" prefWidth="104.0" HBox.hgrow="ALWAYS" />
+                                        <JFXButton fx:id="saveBtn" buttonType="RAISED" prefHeight="28.0" prefWidth="74.0" ripplerFill="#a9d2d9" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #2c8a07;" text="Search" textFill="#2c8a07" HBox.hgrow="ALWAYS">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <padding>
+                                                <Insets bottom="2.0" left="2.0" top="2.0" />
+                                            </padding>
+                                            <graphic>
+                                                <Glyph fontFamily="FontAwesome" icon="SEARCH" textFill="#2c8a07" />
+                                            </graphic>
+                                        </JFXButton>
+                                        <JFXButton fx:id="clearBtn" buttonType="RAISED" cancelButton="true" prefHeight="28.0" prefWidth="72.0" ripplerFill="#b5b984" style="-fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #F00832;" text="Clear" textFill="#f00832" HBox.hgrow="ALWAYS">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" />
+                                            </HBox.margin>
+                                            <padding>
+                                                <Insets bottom="2.0" left="2.0" top="2.0" />
+                                            </padding>
+                                            <graphic>
+                                                <Glyph fontFamily="FontAwesome" icon="CLOSE" textFill="#F00832" />
+                                            </graphic>
+                                        </JFXButton>
+                                    </children>
+                                </HBox>
+                        <HBox fx:id="fromDateHBox" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox fx:id="toDateHBox" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Label text="Container No:" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <CustomTextField fx:id="containerNo" layoutX="124.0" layoutY="25.0" prefHeight="25.0" prefWidth="196.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                            </GridPane>
+                        </content>
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </TitledPane>
+                </content>
+            </TitledPane>
+         <WorldMapView fx:id="worldMapView" countrySelectionMode="SINGLE" locationSelectionMode="SINGLE" style="-fx-border-radius: 10;" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </VBox.margin>
+         </WorldMapView>
+        </VBox>
+    </left>
+    <center>
+        <ScrollPane fx:id="tableViewScrollPane" fitToHeight="true" fitToWidth="true" pannable="true" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+        </ScrollPane>
+    </center>
+</BorderPane>
